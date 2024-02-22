@@ -1,4 +1,5 @@
-<div>
+<a [routerLink]="['info/', character.id]">
   <img [src]="character.image" [alt]="character.name" />
   <h2>{{ character.name }}</h2>
-</div>
+  <p>{{ character.species }}</p>
+</a>

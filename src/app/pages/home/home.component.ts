@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceRickAndMortyService } from '../service/service-rick-and-morty.service';
 import { CardCharacterComponent } from '../../components/card-character/card-character.component';
+import { CommonModule } from '@angular/common';
 
 interface APIPagesInfo {
   info: {
@@ -48,7 +49,7 @@ export interface RickAndMortyCharacter {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CardCharacterComponent],
+  imports: [CardCharacterComponent, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

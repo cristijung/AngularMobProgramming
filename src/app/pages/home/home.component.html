@@ -1,7 +1,11 @@
 <main>
-    <section>
-        <article>
-
-        </article>
-    </section>
+  <section>
+    <article>
+      <ul>
+        <li *ngFor="let rickyData of data.results">
+          <app-card-character [character]="rickyData"></app-card-character>
+        </li>
+      </ul>
+    </article>
+  </section>
 </main>

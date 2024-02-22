@@ -11,4 +11,8 @@ export class ServiceRickAndMortyService {
   getData(): Observable<any> {
     return this.http.get('https://rickandmortyapi.com/api/character');
   }
+
+  getDataById(id: Number): Observable<any> {
+    return this.http.get(`https://rickandmortyapi.com/api/character/${id}`);
+  }
 }
