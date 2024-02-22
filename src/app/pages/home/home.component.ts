@@ -3,6 +3,14 @@ import { ServiceRickAndMortyService } from '../service/service-rick-and-morty.se
 import { CardCharacterComponent } from '../../components/card-character/card-character.component';
 import { CommonModule } from '@angular/common';
 
+export interface RickAndMortyEpisode {
+  id: number;
+  name: string;
+  episode: string;
+  air_date: string;
+  characters: string[];
+}
+
 interface APIPagesInfo {
   info: {
     count: number;
@@ -17,6 +25,9 @@ interface APIPagesInfo {
 
 export interface CharacterResponse extends APIPagesInfo {
   results: RickAndMortyCharacter[];
+}
+export interface EpisodeResponse extends APIPagesInfo {
+  results: RickAndMortyEpisode[];
 }
 
 export interface RickAndMortyCharacter {
